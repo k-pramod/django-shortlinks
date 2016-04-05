@@ -1,0 +1,14 @@
+<h1>Create short links!</h1>
+
+{% if form %}
+<form id="main-form" action="{{ form_action_uri }}" method='POST' class="form-horizontal">
+{% csrf_token %}
+    {{ form }}
+    {{ form.errors }}
+	<input class="" type="submit" value="Submit!" />
+</form>
+{% endif %}
+
+{% if new_shortlink %}
+    {{ new_shortlink }}
+{% endif %}
